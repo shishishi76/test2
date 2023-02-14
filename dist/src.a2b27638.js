@@ -128,6 +128,59 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 //   <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
 // </div>
 // `;
+
+/**
+ * アロー関数
+ */
+//従来の関数
+// function func1(str) {
+//     return str;
+// }
+// const func1 = function (str) {
+//   return str;
+// };
+// console.log(func1("func1です"));
+
+// //アロー関数
+// const func2 = (str) => {
+//   return str;
+// };
+// console.log("func2です");
+
+// //アロー関数の中身が一行の時のみ省略版
+// const func2_1 = (str) => str;
+// console.log(func2_1("func2_1です"));
+
+// //引数二つバージョン
+// const func3 = (num1, num2) => {
+//   return num1 + num2;
+// };
+// console.log(func3(5, 123));
+
+/**
+ * 分割代入
+ */
+
+// const myProfile = {
+//   name: "しょうご",
+//   age: 23,
+// };
+
+// const message1 = `名前は${myProfile.name}です。年齢は${myProfile.age}です。`;
+// console.log(message1);
+
+// //分割代入
+// const { name, age } = myProfile;
+// const message2 = `名前は${name}です。年齢は${age}です。`;
+// console.log(message1);
+
+var myProfile = ["しょうご", 23];
+var message3 = "\u540D\u524D\u306F".concat(myProfile[0], "\u3067\u3059\u3002\u5E74\u9F62\u306F").concat(myProfile[1], "\u3067\u3059\u3002");
+console.log(message3);
+var name = myProfile[0],
+  age = myProfile[1];
+var message4 = "\u540D\u524D\u306F".concat(name, "\u3067\u3059\u3002\u5E74\u9F62\u306F").concat(age, "\u6B73\u3067\u3059\u3002");
+console.log(message4);
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -153,7 +206,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44167" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41145" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
